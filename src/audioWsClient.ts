@@ -126,6 +126,7 @@ export class AudioWsClient extends EventEmitter {
   send(audio: Uint8Array) {
     if (this.ws.readyState === 1) {
       this.ws.send(audio);
+      console.log("audioNode send :",audio);
     }
   }
 
