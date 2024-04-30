@@ -203,7 +203,7 @@ export class RetellWebClient extends EventEmitter {
             audioProcessingEvent.inputBuffer.getChannelData(0);
           const pcmData = convertFloat32ToUint8(pcmFloat32Data);
           this.liveClient.send(pcmData);
-
+          console.log("liveClient send :",pcmData);
           // Playback here
           const outputBuffer = audioProcessingEvent.outputBuffer;
           const outputChannel = outputBuffer.getChannelData(0);
