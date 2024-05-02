@@ -177,6 +177,7 @@ export class RetellWebClient extends EventEmitter {
           let eventName = data[0];
           if (eventName === "capture") {
             this.liveClient?.send(data[1]);
+            console.log("worklet send :",data[1]);
           } else if (eventName === "playback") {
             this.emit("audio", data[1]);
           }
